@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import './styles/fonts.css';
+/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@font-face {
+  font-family: 'logotype';
+  src: url('/fonts/extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'logotype';
+  src: url('/fonts/medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'logotype';
+  src: url('/fonts/light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+html {
+
+  background: radial-gradient(circle at center, #141414 10%, #0f0f0f 80%)
+}
+}
+.logotype-extrabold {
+  font-family: 'logotype';
+  font-weight: 800;
+  font-style: normal;
+}
+.logotype-medium {
+  font-family: 'logotype';
+  font-weight: 500;
+  font-style: normal;
+}
+.logotype-light {
+  font-family: 'logotype';
+  font-weight: 300;
+  font-style: normal;
+}
+
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.041);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+@layer utilities {
+  .bg-dark {
+    background-color: #141414;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:bg-[#252525];
+  }
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #141414;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+[data-barba="container"] {
+  position: relative;
+  min-height: 100vh;
+}
+
+
+
