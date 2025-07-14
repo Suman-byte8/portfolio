@@ -15,20 +15,20 @@ const Hero = () => {
   return (
     <div className="w-full max-h-screen">
       {/* Main Container */}
-      <div className="max-w-6xl mx-auto space-y-6">
+      <div className="max-w-6xl mx-auto space-y-6 px-2 sm:px-4 md:px-6 lg:px-0">
         {/* Hero Card */}
-        <div className="bg-[#1d1d1d] rounded-2xl p-6 flex gap-6">
-          <div className="w-64 h-48 overflow-hidden rounded-2xl">
+        <div className="bg-[#1d1d1d] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
+          <div className="w-full sm:w-64 h-40 sm:h-48 overflow-hidden rounded-2xl mb-4 sm:mb-0">
             <img
               src={pfp}
               alt="profile"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex flex-col justify-center gap-2">
+          <div className="flex flex-col justify-center gap-2 items-center sm:items-start">
             <TypeWriter />
-            <h1 className="text-white text-4xl font-bold">SUMAN SAHA</h1>
-            <p className="text-gray-400">An Innovative Creative Professional</p>
+            <h1 className="text-white text-3xl sm:text-4xl font-bold text-center sm:text-left">SUMAN SAHA</h1>
+            <p className="text-gray-400 text-center sm:text-left">An Innovative Creative Professional</p>
             <div className="flex gap-2 mt-4">
               <Link
                 to="/contact"
@@ -41,9 +41,9 @@ const Hero = () => {
         </div>
 
         {/* Info Cards Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
           {/* Check Latest Card */}
-          <div className="bg-[#1d1d1d] rounded-2xl p-4 flex items-center justify-center text-white text-lg font-semibold hover:text-xl transition-all duration-700 cursor-pointer">
+          <div className="bg-[#1d1d1d] rounded-2xl p-4 flex items-center justify-center text-white text-base sm:text-lg font-semibold hover:text-xl transition-all duration-700 cursor-pointer">
             <p className="">Check out our Latest Design trends and Projects</p>
           </div>
 
@@ -80,7 +80,7 @@ const Hero = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4">
           {/* Resume Card */}
           <div className="bg-[#1d1d1d] rounded-2xl p-6">
             <h3 className="text-white font-bold mb-4">Resume</h3>
@@ -112,27 +112,27 @@ const Hero = () => {
           {/* Social Links */}
           <div className="bg-[#1d1d1d] rounded-2xl p-6">
             <h3 className="text-white font-bold mb-4">Stay with me</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-2 sm:gap-4 flex-wrap">
               <a
-                href="#"
+                href="https://github.com/Suman-byte8"
                 className="w-10 h-10 bg-[#252525] rounded-lg flex items-center justify-center"
               >
                 <FaGithub className="text-white text-xl" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/sum4.an/"
                 className="w-10 h-10 bg-[#252525] rounded-lg flex items-center justify-center"
               >
                 <FaInstagram className="text-white text-xl" />
               </a>
               <a
-                href="#"
+                href="https://wa.me/+917797607126"
                 className="w-10 h-10 bg-[#252525] rounded-lg flex items-center justify-center"
               >
                 <FaWhatsapp className="text-white text-xl" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/suman-saha-225958291/"
                 className="w-10 h-10 bg-[#252525] rounded-lg flex items-center justify-center"
               >
                 <FaLinkedin className="text-white text-xl" />
@@ -142,17 +142,17 @@ const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
           <div className="bg-[#1d1d1d] rounded-2xl p-6">
-            <h3 className="text-white font-bold text-2xl">02</h3>
+            <h3 className="text-white font-bold text-xl sm:text-2xl">+02</h3>
             <p className="text-gray-400 text-sm">Years of Experience</p>
           </div>
           <div className="bg-[#1d1d1d] rounded-2xl p-6">
-            <h3 className="text-white font-bold text-2xl">+10</h3>
+            <h3 className="text-white font-bold text-xl sm:text-2xl">+10</h3>
             <p className="text-gray-400 text-sm">Projects Completed</p>
           </div>
           <div className="bg-[#1d1d1d] rounded-2xl p-6">
-            <h3 className="text-white font-bold text-2xl">+14</h3>
+            <h3 className="text-white font-bold text-xl sm:text-2xl">+14</h3>
             <p className="text-gray-400 text-sm">Happy Clients</p>
           </div>
         </div>
