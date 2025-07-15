@@ -91,7 +91,7 @@ const Hero = () => {
               </div>
 
               <a
-                href="/resume.pdf"
+                href="/public/Suman Saha__Portfolio.pdf"
                 download="SumanSaha_Resume.pdf"
                 className="bg-[#252525] text-white px-4 py-2 rounded hover:bg-[#303030] transition-all"
               >
