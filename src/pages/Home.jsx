@@ -13,9 +13,9 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="w-full max-h-screen">
+    <div className="w-full max-h-screen ">
       {/* Main Container */}
-      <div className="max-w-6xl mx-auto space-y-6 px-2 sm:px-4 md:px-6 lg:px-0">
+      <div className="max-w-6xl mx-auto space-y-6 px-2 sm:px-4 md:px-6 lg:px-0 pb-5">
         {/* Hero Card */}
         <div className="bg-[#1d1d1d] rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
           <div className="w-full sm:w-64 h-40 sm:h-48 overflow-hidden rounded-2xl mb-4 sm:mb-0">
