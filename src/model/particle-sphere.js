@@ -1,47 +1,42 @@
+"use client";
+
 import { useEffect, useState } from 'react'
 import Spline from '@splinetool/react-spline'
 import  { Application } from '@splinetool/runtime'
 
 export function ParticleSphere() {
-  const [splineApp, setSplineApp] = useState<Application | null>(null)
-
-  // Function to get appropriate zoom level based on screen size
-  const getZoomLevel = () => {
-    const width = window.innerWidth
-    if (width < 1024) { // Tablet (md to lg breakpoint)
-      return 1.2
-    } else { // Desktop
-      return 1.6
-    }
-  }
+  const [splineApp, setSplineApp] = useState(null)
 
   function onLoad(spline) {
     console.log('Spline loaded, trying setZoom...')
     setSplineApp(spline)
-    
-    // Set initial zoom based on current screen size
-    const zoomLevel = getZoomLevel()
-    spline.setZoom(zoomLevel)
-    console.log(`setZoom(${zoomLevel}) called for screen width: ${window.innerWidth}px`)
   }
 
-  // Handle resize for zoom adjustments
+  // Remove the zoom adjustment logic
   useEffect(() => {
     const handleResize = () => {
-      // Adjust zoom if we have a spline app
-      if (splineApp) {
-        const zoomLevel = getZoomLevel()
-        splineApp.setZoom(zoomLevel)
-        console.log(`Zoom adjusted to ${zoomLevel} for screen width: ${window.innerWidth}px`)
-      }
+      // No zoom adjustment logic
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Adjust to check if splineApp supports the required methods
+  useEffect(() => {
+    if (splineApp && typeof splineApp.setZoom === 'function') {
+      splineApp.setZoom(1); // Set a fixed zoom level
     }
 
-    window.addEventListener('resize', handleResize)
-    
-    return () => {
-      window.removeEventListener('resize', handleResize)
+    // Check if splineApp supports event handling
+    if (splineApp && typeof splineApp.addEventListener === 'function') {
+      splineApp.addEventListener('mouseWheel', (e) => e.preventDefault()); // Prevent zooming
+      splineApp.addEventListener('hover', (e) => e.preventDefault()); // Disable hover effects
     }
-  }, [splineApp])
+  }, [splineApp]);
 
   return (
     <Spline 
