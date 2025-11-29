@@ -1,25 +1,17 @@
-"use client";
-
 import { useState } from "react";
 import { Globe } from "lucide-react";
 import { navigationItems } from "@/constants/index";
-import { Tab } from "./navigation/tab";
-import { Cursor } from "./navigation/cursor";
-import { Sidebar } from "./navigation/sidebar/sidebar";
+import { Tab } from "./tab";
+import { Cursor } from "./cursor";
+import { Sidebar } from "./sidebar/sidebar";
 import { useNavigationStore } from "@/stores/navigationStore";
 
-export default function Navbar() {
+export function NavBar() {
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
     opacity: 0,
   });
-
-  const [activeLink, setActiveLink] = useState(null);
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
 
   // Get active navigation item using optimized selector
   const activeNavigationItem = useNavigationStore(state => state.getActiveNavigationItem());
@@ -38,20 +30,17 @@ export default function Navbar() {
           className="glass-texture rounded-full flex items-center justify-center gap-2 px-2 py-2 relative"
         >
           {navigationItems.map((item) => (
-            <Tab
-              key={item.name}
-              setPosition={setPosition}
+            <Tab 
+              key={item.name} 
+              setPosition={setPosition} 
               href={item.link}
               isActive={activeNavigationItem === item.name}
-              className={`text-sm font-semibold transition-colors duration-300 ${
-                activeNavigationItem === item.name ? "text-blue-500" : "text-gray-700 hover:text-gray-900"
-              }`}
             >
               {item.name === "Contact" && <Globe className="w-4 h-4" />}
               {item.name}
             </Tab>
           ))}
-
+          
           <Cursor position={position} />
         </ul>
       </nav>

@@ -1,0 +1,16 @@
+/* Import Azonix font */
+@font-face {
+  font-family: 'Azonix';
+  src: url('/fonts/Azonix.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Define a CSS variable for Azonix font */
+:root {
+  --font-azonix: 'Azonix', sans-serif;
+}
+
+.font-azonix {
+  font-family: var(--font-azonix);
+}
