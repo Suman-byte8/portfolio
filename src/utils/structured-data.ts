@@ -13,7 +13,7 @@ export const getPersonStructuredData = () => ({
       "@type": "Organization",
       "name": "Independent Consultant"
     },
-    "description": "Patent-winning full-stack developer specializing in AI automation and enterprise solutions",
+    "description": "Practical full-stack developer specializing in AI automation and enterprise solutions",
     "alumniOf": {
       "@type": "EducationalOrganization",
       "name": "AI Forge"
@@ -39,7 +39,7 @@ export const getPersonStructuredData = () => ({
     "@type": "WebSite",
     "name": "Stavros Symeonidis Portfolio",
     "url": "https://www.stavrossymeonidis.dev",
-    "description": "Portfolio of Stavros Symeonidis - Patent-winning full-stack developer",
+    "description": "Portfolio of Stavros Symeonidis - Practical full-stack developer",
     "publisher": {
       "@type": "Person",
       "name": "Stavros Symeonidis"

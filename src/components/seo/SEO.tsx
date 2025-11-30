@@ -24,8 +24,8 @@ interface SEOProps {
 }
 
 export const SEO: FC<SEOProps> = ({
-  title = "Stavros Symeonidis - Patent-Winning Full-Stack Developer",
-  description = "Patent-winning full-stack developer specializing in AI automation, enterprise solutions, and production-ready systems. Building streamlined operations with React, TypeScript, Python, and cutting-edge AI technologies.",
+  title = "Stavros Symeonidis - Practical full-stack developer",
+  description = "Practical full-stack developer specializing in AI automation, enterprise solutions, and production-ready systems. Building streamlined operations with React, TypeScript, Python, and cutting-edge AI technologies.",
   keywords = "Stavros Symeonidis, Full-Stack Developer, AI Developer, React Developer, TypeScript, Python, Machine Learning, Patent Winner, CTO, AI Automation, Enterprise Solutions",
   author = "Stavros Symeonidis",
   image = "https://www.stavrossymeonidis.dev/og-image.jpg",
@@ -36,7 +36,7 @@ export const SEO: FC<SEOProps> = ({
   children
 }) => {
   // Construct the full title with branding
-  const fullTitle = title === "Stavros Symeonidis - Patent-Winning Full-Stack Developer" 
+  const fullTitle = title === "Stavros Symeonidis - Practical full-stack developer" 
     ? title 
     : `${title} | Stavros Symeonidis`;
 

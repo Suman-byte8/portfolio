@@ -8,10 +8,10 @@ export function HomeInfoGrid() {
   const { open: openDrawer } = useDrawerStore();
 
   // Original email for copy functionality
-  const originalEmail = "info@stavrossymeonidis.dev";
+  const originalEmail = "sumansahaweb.dev@gmail.com";
   
   // Email with invisible characters to prevent mobile auto-detection
-  const emailDisplay = "info" + String.fromCharCode(8203) + "@" + String.fromCharCode(8203) + "stavrossymeonidis.dev";
+  const emailDisplay = "sumansahaweb.dev" + String.fromCharCode(8203) + "@" + String.fromCharCode(8203) + "gmail.com";
 
   const handleCopy = async () => {
     try {
@@ -33,7 +33,7 @@ export function HomeInfoGrid() {
       {/* Description - Right column */}
       <div className="flex items-center justify-end order-2">
         <p className="font-body font-light text-[18px] text-[#b3b3b3] leading-relaxed text-left">
-          Patent-winning full-stack developer<br />who combines technical expertise<br />with deep business understanding.
+          Practical full-stack developer<br />who blends solid engineering<br />with real-world business insight..
         </p>
       </div>
       

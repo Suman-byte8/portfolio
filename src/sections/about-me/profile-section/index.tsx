@@ -23,7 +23,7 @@ export function ProfileSection() {
             duration={1.5}
             spread={5}
           >
-            Stavros Symeonidis
+            Suman Saha
           </TextShimmer>
         </h3>
         <p className="font-body text-sm font-light text-muted-foreground mb-4">

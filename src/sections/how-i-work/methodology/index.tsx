@@ -37,7 +37,7 @@ export function Methodology() {
           <span className="font-body text-sm text-[#b3b3b3] font-light">Teams</span>
         </div>
         
-        {/* Second Row */}
+        {/* Second Row
         <div className="flex flex-col items-center justify-center gap-2 w-full h-22 border border-[#353739] rounded-2xl hover:border-[#555759] transition-colors duration-300">
           <SlackIcon className="w-9 h-9" />
           <span className="font-body text-sm text-[#b3b3b3] font-light">Slack</span>
@@ -49,7 +49,7 @@ export function Methodology() {
         <div className="flex flex-col items-center justify-center gap-2 w-full h-22 border border-[#353739] rounded-2xl hover:border-[#555759] transition-colors duration-300">
           <TrelloIcon className="w-9 h-9" />
           <span className="font-body text-sm text-[#b3b3b3] font-light">Trello</span>
-        </div>
+        </div> */}
       </div>
       
       {/* Request Channel Button */}

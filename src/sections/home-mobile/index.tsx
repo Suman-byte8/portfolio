@@ -35,7 +35,7 @@ export function MobileHome() {
                   duration={1.5}
                   spread={5}
               >
-                  STREAMLINED OPERATIONS
+                  CONSISTENT DELIVERY
               </TextShimmer>
           </h1>
     
@@ -46,7 +46,7 @@ export function MobileHome() {
     
           {/* Description Paragraph */}
           <p className="font-body text-center text-base leading-relaxed text-[#b3b3b3] max-w-sm mb-10 relative z-10">
-            Patent-winning full-stack developer who combines technical expertise with deep business understanding.
+            Practical full-stack developer who blends solid engineering with real-world business insight..
           </p>
 
           {/* Connect Button */}

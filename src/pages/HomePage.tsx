@@ -24,8 +24,8 @@ export function HomePage() {
   return (
     <>
       <SEO 
-        title="Stavros Symeonidis - Patent-Winning Full-Stack Developer"
-        description="Patent-winning full-stack developer specializing in AI automation, enterprise solutions, and production-ready systems. Building streamlined operations with cutting-edge technology."
+        title="Stavros Symeonidis - Practical full-stack developer"
+        description="Practical full-stack developer specializing in AI automation, enterprise solutions, and production-ready systems. Building streamlined operations with cutting-edge technology."
         url="https://www.stavrossymeonidis.dev"
         jsonLd={structuredData}
       />

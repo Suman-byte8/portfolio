@@ -7,27 +7,23 @@ export function AvailabilityStatus() {
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const ukTime = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/London',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-      }).format(now);
-      setCurrentTime(ukTime);
+      const IST = now.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+        timeZone: "Asia/Kolkata"
+      });
+      setCurrentTime(IST);
     };
 
-    // Update immediately
     updateTime();
-    
-    // Update every minute
     const interval = setInterval(updateTime, 60000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="flex items-center justify-center gap-2 text-sm font-body text-[#b3b3b3] whitespace-nowrap">
-      {/* Animated green dot */}
       <div className="relative">
         <motion.div
           className="w-2 h-2 bg-green-500 rounded-full"
@@ -41,7 +37,6 @@ export function AvailabilityStatus() {
             ease: "easeInOut",
           }}
         />
-        {/* Pulse ring */}
         <motion.div
           className="absolute inset-0 w-2 h-2 bg-green-500 rounded-full"
           animate={{
@@ -55,21 +50,19 @@ export function AvailabilityStatus() {
           }}
         />
       </div>
-      
-      {/* Mobile version (< 768px) */}
+
       <div className="flex items-center gap-2 md:hidden text-xs font-light">
-        <span>UK Based</span>
+        <span>India Based</span>
         <span>•</span>
         <span>Available everywhere</span>
         <span>•</span>
         <span>{currentTime}</span>
       </div>
 
-      {/* Desktop version (>= 768px) */}
       <div className="hidden md:flex items-center gap-2">
         <span>Available now</span>
         <span>•</span>
-        <span>UK</span>
+        <span>India</span>
         <span>•</span>
         <span>{currentTime}</span>
         <span>•</span>

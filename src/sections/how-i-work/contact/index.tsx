@@ -5,10 +5,10 @@ export function Contact() {
   const [copied, setCopied] = useState(false);
 
   // Original email for copy functionality
-  const originalEmail = "info@stavrossymeonidis.dev";
+  const originalEmail = "sumansahaweb.dev@gmail.com";
   
   // Email with invisible characters to prevent mobile auto-detection
-  const emailDisplay = "info" + String.fromCharCode(8203) + "@" + String.fromCharCode(8203) + "stavrossymeonidis.dev";
+  const emailDisplay = "suman​saha​web.​dev@gmail.​com"; // zero-width spaces added
 
   const handleCopy = async () => {
     try {
