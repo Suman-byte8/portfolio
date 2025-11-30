@@ -55,7 +55,7 @@ export function SocialLinks() {
         className="w-8 h-8 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
         aria-label="Visit GitHub profile"
       >
-        <InstagramIcon className="w-6 h-6" />
+        <InstagramIcon className="w-6 h-6"  />
       </button>
 
       <button 
