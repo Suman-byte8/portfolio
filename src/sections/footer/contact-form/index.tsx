@@ -79,7 +79,7 @@ export function ContactForm() {
         <input
           type="text"
           name="name"
-          placeholder="John Doe"
+          placeholder="Enter your name"
           required
           className="w-full px-4 py-3 bg-background border border-border rounded-lg font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-ring transition-colors"
         />
@@ -93,7 +93,7 @@ export function ContactForm() {
         <input
           type="email"
           name="email"
-          placeholder="john@example.com"
+          placeholder="Enter your email"
           required
           className="w-full px-4 py-3 bg-background border border-border rounded-lg font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-ring transition-colors"
         />
