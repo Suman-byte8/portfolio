@@ -13,55 +13,64 @@ export const services: Service[] = [
   {
     icon: <SparklesIcon className="w-6 h-6" />,
     iconBg: "bg-black/20 border border-[#353739]",
-    title: "AI Process Automation",
-    description: "Build custom LLM solutions and workflows to eliminate repetitive tasks and boost productivity."
-  },
-  {
-    icon: <LinkIcon className="w-6 h-6" />,
-    iconBg: "bg-black/20 border border-[#353739]",
-    title: "API Integration Solutions", 
-    description: "Connect your systems seamlessly—from Xero to Shopify, payroll to banking, eliminating manual workflows."
+    title: "Next.js Frontend Engineering",
+    description:
+      "Build modern, animated, SEO-ready frontends using Next.js, Tailwind, GSAP, and Framer Motion with pixel-perfect UI."
   },
   {
     icon: <BrainIcon className="w-6 h-6" />,
     iconBg: "bg-black/20 border border-[#353739]",
-    title: "Intelligence Dashboards",
-    description: "Transform scattered data into actionable insights with self-service analytics and custom reporting."
-  },
-  {
-    icon: <BarsIcon className="w-6 h-6" />,
-    iconBg: "bg-black/20 border border-[#353739]",
-    title: "Predictive Analytics Models",
-    description: "Forecast cash flow and business trends using machine learning on your Xero and CRM data."
+    title: "MERN Stack Development",
+    description:
+      "Full-stack apps with React, Express, MongoDB, and JWT auth—clean APIs, scalable DB design, and production-ready logic."
   },
   {
     icon: <MobileIcon className="w-6 h-6" />,
     iconBg: "bg-black/20 border border-[#353739]",
-    title: "Mobile App Development",
-    description: "Launch your MVP with React Native and Expo, including app store submission and optimisation."
+    title: "Ride-Booking Systems",
+    description:
+      "Real-time ride booking with Socket.IO, location routing, dynamic pricing, and smooth GSAP-powered UI interactions."
   },
   {
-    icon: <CloudIcon className="w-6 h-6" />,
+    icon: <LinkIcon className="w-6 h-6" />,
     iconBg: "bg-black/20 border border-[#353739]",
-    title: "Cloud Cost Optimisation",
-    description: "Analyse and reduce AWS/Azure/GCP spend by 20-40% through serverless migration and smart scaling."
+    title: "API Integration & Automation",
+    description:
+      "Integrate third-party APIs, payment gateways, OCR processors, geolocation APIs, and automate business workflows."
+  },
+  {
+    icon: <BarsIcon className="w-6 h-6" />,
+    iconBg: "bg-black/20 border border-[#353739]",
+    title: "Custom UI/UX & Micro-Animations",
+    description:
+      "High-impact interfaces with GSAP, Framer Motion, Lottie, and scroll-based interactions for premium product feel."
   },
   {
     icon: <DataIcon className="w-6 h-6" />,
     iconBg: "bg-black/20 border border-[#353739]",
-    title: "Data Modernisation",
-    description: "Migrate from legacy systems to BigQuery or Snowflake with cost-optimised ETL pipelines."
+    title: "Data-Driven Web Apps",
+    description:
+      "Dashboards, analytics cards, scoreboards, and dynamic visual components with optimised state management."
+  },
+  {
+    icon: <CloudIcon className="w-6 h-6" />,
+    iconBg: "bg-black/20 border border-[#353739]",
+    title: "Serverless & Cloud Deployments",
+    description:
+      "Deploy and optimize apps on Vercel, AWS Lambda, and serverless APIs with fast, scalable infrastructure."
   },
   {
     icon: <CartIcon className="w-6 h-6" />,
     iconBg: "bg-black/20 border border-[#353739]",
-    title: "Conversion Optimisation",
-    description: "Boost sales through funnel analytics,\nA/B testing, and Core Web Vitals performance improvements."
+    title: "E-Commerce & Digital Warranty",
+    description:
+      "Build custom product flows, digital warranty systems, and NFT-based verification using modern JavaScript tooling."
   },
   {
     icon: <DollarIcon className="w-6 h-6" />,
     iconBg: "bg-black/20 border border-[#353739]",
-    title: "SaaS Spend Governance",
-    description: "Discover and optimise your 139+ software subscriptions, eliminating waste and negotiating better deals."
+    title: "Smart Contract Basics",
+    description:
+      "Beginner-friendly Solidity contract development for token logic, identity validation, and blockchain-ready workflows."
   }
 ];
