@@ -8,8 +8,8 @@ export function ProfileSection() {
       {/* Profile Image with CometCard - top row on mobile, left side on desktop */}
       <CometCard className="w-64 flex-shrink-0 [@media(min-width:685px)]:ml-4">
         <img 
-          src="/profile-dev.jpg" 
-          alt="Stavros Symeonidis" 
+          src="/profile-dev.png" 
+          alt="Suman Saha Profile Picture" 
           className="w-full h-full object-cover rounded-2xl"
         />
       </CometCard>
@@ -27,7 +27,7 @@ export function ProfileSection() {
           </TextShimmer>
         </h3>
         <p className="font-body text-sm font-light text-muted-foreground mb-4">
-          Patent-Winning AI Developer & CTO
+        Full-Stack Developer • AI & Automation Enthusiast • 3D Explorer
         </p>
         <div className="flex justify-center [@media(min-width:685px)]:justify-start">
           <SocialLinks />

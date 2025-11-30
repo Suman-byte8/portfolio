@@ -14,7 +14,7 @@ export function AvailabilityCard() {
       className="bento-no-min col-span-3 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
     >
       <h3 className="font-heading text-xl text-foreground text-center">
-        Accepting 2 new clients this quarter
+        Accepting clients from worldwide. <br />Let's build something great together!
       </h3>
     </button>
   );

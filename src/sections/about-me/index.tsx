@@ -41,28 +41,29 @@ export function AboutMe() {
           <div className="grid grid-cols-5 gap-4">
 
             {/* Column 1, Row 1 - Streamline Processes */}
-            <SimpleTextCard text="Streamline Processes" />
+            <SimpleTextCard text="Creative Delivery" />
 
-            {/* Column 2, Rows 1-2 - AI Forge */}
-            <AchievementCard 
-              title={<>AI Forge<br />Cohort 5<br />Alumnus</>}
-              description="12 out of 500+"
-              className="row-span-2"
-            />
+            {/* Column 2, Rows 1-2 - Full-Stack Internship */}
+<AchievementCard 
+  title={<>Full-Stack Dev<br />Internship<br />2024</>}
+  description="Next24Tech Technology & Services"
+  className="row-span-2"
+/>
 
-            {/* Column 3, Rows 1-2 - AI Patent */}
-            <AchievementCard 
-              title={<>AI Patent<br />Winner<br />2023</>}
-              description="IP Hatch Winner 2023"
-              className="row-span-2"
-            />
+{/* Column 3, Rows 1-2 - Hackathon Recognition */}
+<AchievementCard 
+  title={<>Hackathon<br />Performer<br />2023</>}
+  description="Recognized for MERN-based project"
+  className="row-span-2"
+/>
 
-            {/* Column 4, Rows 1-2 - Sky Labs */}
-            <AchievementCard 
-              title={<>Sky Labs<br />Finalist<br />2022</>}
-              description="18 out of 250+"
-              className="row-span-2"
-            />
+{/* Column 4, Rows 1-2 - Project Milestone */}
+<AchievementCard 
+  title={<>10+ Projects<br />Built Across<br />Web</>}
+  description="MERN • Next.js • GSAP • APIs"
+  className="row-span-2"
+/>
+
 
             {/* Column 5, Rows 1-3 - Business-First Tech Leader */}
             <QuoteCard />
@@ -87,8 +88,8 @@ export function AboutMe() {
             {/* Column 5, Row 5 - Prototype to Production */}
             <FeatureCard 
               icon={rocketIcon} 
-              text={<>Prototype<br/>to Production</>}
-              altText="Prototype to Production"
+              text={<>Idea<br/>to Production</>}
+              altText="Idea to Production"
               variant="text-right-icon-left"
             />
 
@@ -96,7 +97,7 @@ export function AboutMe() {
             <AvailabilityCard />
 
             {/* Column 5, Row 6 - Enterprise Compliance Standards */}
-            <SimpleTextCard text="Enterprise Compliance Standards" />
+            <SimpleTextCard text="Compliance Standards" />
             
           </div>
         </div>

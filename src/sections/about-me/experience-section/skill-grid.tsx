@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react';
-import gitBranchIcon from '../../../assets/gitBranchIcon.svg';
-import plugIcon from '../../../assets/plugIcon.svg';
-import ragDocIcon from '../../../assets/ragDocIcon.svg';
-import langchainIcon from '../../../assets/langachainIcon.svg';
-import layersIcon from '../../../assets/layersIcon.svg';
-import shieldCheckIcon from '../../../assets/shieldCheckIcon.svg';
+
 import codeIcon from '../../../assets/codeIcon.svg';
-import cpuIcon from '../../../assets/cpuIcon.svg';
-import creditCardIcon from '../../../assets/creditCardIcon.svg';
+import blender from '../../../assets/blender.svg';
+import photoshop from '../../../assets/photoshop.svg';
 import buildingIcon from '../../../assets/buildingIcon.svg';
 import { useVerticalScroll } from './useVerticalScroll';
 import { useHorizontalScrollSkills } from './useHorizontalScrollSkills';
@@ -37,16 +32,11 @@ export function SkillGrid() {
   }, []);
 
   const skills: SkillItem[] = [
-    { text: "ML Pipelines", icon: gitBranchIcon },
-    { text: "Multi-platform Integrations", icon: plugIcon },
-    { text: "RAG Systems", icon: ragDocIcon },
-    { text: "LangChain", icon: langchainIcon },
-    { text: "Multi-tenant SaaS", icon: layersIcon },
-    { text: "Enterprise Data Governance", icon: shieldCheckIcon },
+ 
     { text: "Full-stack Dev", icon: codeIcon },
-    { text: "ML Algorithms", icon: cpuIcon },
-    { text: "Payment Processing", icon: creditCardIcon },
-    { text: "System Architecture", icon: buildingIcon },
+    { text: "Blender", icon: blender },
+    { text: "Photoshop", icon: photoshop },
+    { text: "Smart Contract Basics", icon: buildingIcon },
   ];
 
   if (isLargeScreen) {
