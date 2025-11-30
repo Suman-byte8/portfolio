@@ -1,5 +1,5 @@
 import { FooterSocials } from '../footer-socials';
-import { FooterNav } from '../footer-nav';
+
 
 export function FooterBottom() {
   return (

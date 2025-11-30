@@ -132,7 +132,7 @@ export function GlobalDrawer() {
               
               {!isSubmitSuccessful && (
                 <p className="text-sm leading-relaxed text-muted-foreground font-body">
-                  Turn your vision into reality with a partner who truly understands what your business needs.
+                  From idea to launch — team up with people who actually get your business, fr.
                 </p>
               )}
             </DrawerHeader>
@@ -181,7 +181,7 @@ export function GlobalDrawer() {
                   <input
                     type="text"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="Enter your name"
                     required
                     className="w-full px-4 py-3 bg-background border border-border rounded-lg font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-ring transition-colors"
                   />
@@ -195,7 +195,7 @@ export function GlobalDrawer() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="john@example.com"
+                    placeholder="Enter your email"
                     required
                     className="w-full px-4 py-3 bg-background border border-border rounded-lg font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-ring transition-colors"
                   />
@@ -208,7 +208,7 @@ export function GlobalDrawer() {
                   </label>
                   <textarea
                     name="message"
-                    placeholder="Tell me about your project..."
+                    placeholder="Anything..."
                     required
                     className="w-full px-4 py-3 bg-background border border-border rounded-lg font-body text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-ring transition-colors resize-none h-28 sm:h-36"
                   />
