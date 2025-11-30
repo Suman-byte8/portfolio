@@ -105,89 +105,84 @@ export function AboutMe() {
     );
   }
 
-  // Compact layout for screens < 1381px
-  return (
-    <section 
-      id="about-me" 
-      className="py-20 px-6 md:px-12 lg:px-16"
-    >
-      <div className="w-full max-w-7xl mx-auto">
-        <div className="flex flex-col gap-4">
-          
-          {/* Row 1: 3 AchievementCards */}
-          <div className="grid grid-cols-3 gap-4">
-            <AchievementCard 
-              title={<>AI Forge<br />Cohort 5<br />Alumnus</>}
-              description="12 out of 500+"
-            />
-            <AchievementCard 
-              title={<>AI Patent<br />Winner<br />2023</>}
-              description="IP Hatch Winner 2023"
-            />
-            <AchievementCard 
-              title={<>Sky Labs<br />Finalist<br />2022</>}
-              description="18 out of 250+"
-            />
-          </div>
-
-          {/* Row 2: ProfileSection */}
-          <div className="w-full">
-            <ProfileSection />
-          </div>
-
-          {/* Row 3: 2 FeatureCards + 1 SimpleTextCard */}
-          <div className="flex flex-col gap-4">
-            {/* FeatureCards row */}
-            <div className="grid grid-cols-2 [@media(min-width:1175px)]:grid-cols-3 gap-4">
-              <FeatureCard 
-                icon={rocketIcon} 
-                text={<>Prototype to<br/>Production</>}
-                altText="Prototype to Production"
-                variant="text-right-icon-left"
-              />
-              <FeatureCard 
-                icon={zapIcon} 
-                text={<>Scalable<br/>Solutions</>}
-                altText="Scalable solutions"
-                variant="text-left-icon-right"
-              />
-              {/* SimpleTextCard only shows in this row on screens >= 1175px */}
-              <div className="hidden [@media(min-width:1175px)]:block">
-                <SimpleTextCard text="Enterprise Compliance Standards" />
-              </div>
-            </div>
-            
-            {/* SimpleTextCard on its own row for screens < 1175px */}
-            <div className="[@media(min-width:1175px)]:hidden">
-              <SimpleTextCard text="Enterprise Compliance Standards" />
-            </div>
-          </div>
-
-          {/* Row 4: Complex 2x3 grid */}
-          <div className="grid grid-cols-3 grid-rows-2 gap-4">
-            {/* Column 1, Row 1 */}
-            <div className="col-start-1 row-start-1">
-              <SimpleTextCard text="Streamline Processes" />
-            </div>
-            
-            {/* Column 1, Row 2 */}
-            <div className="col-start-1 row-start-2">
-              <TrustIndicator />
-            </div>
-            
-            {/* Columns 2-3, Rows 1-2 */}
-            <div className="col-start-2 col-span-2 row-start-1 row-span-2">
-              <QuoteCard />
-            </div>
-          </div>
-
-          {/* Row 5: ExperienceSection */}
-          <div className="w-full">
-            <ExperienceSection />
-          </div>
-
+// Compact layout for screens < 1381px
+return (
+  <section 
+    id="about-me" 
+    className="py-20 px-6 md:px-12 lg:px-16"
+  >
+    <div className="w-full max-w-7xl mx-auto">
+      <div className="flex flex-col gap-4">
+        
+        {/* Row 1: 3 AchievementCards (same as big layout) */}
+        <div className="grid grid-cols-3 gap-4">
+          <AchievementCard 
+            title={<>Full-Stack Dev<br />Internship<br />2024</>}
+            description="Next24Tech Technology & Services"
+          />
+          <AchievementCard 
+            title={<>Hackathon<br />Performer<br />2023</>}
+            description="Recognized for MERN-based project"
+          />
+          <AchievementCard 
+            title={<>10+ Projects<br />Built Across<br />Web</>}
+            description="MERN • Next.js • GSAP • APIs"
+          />
         </div>
+
+        {/* Row 2: ProfileSection */}
+        <div className="w-full">
+          <ProfileSection />
+        </div>
+
+        {/* Row 3: 2 FeatureCards + 1 SimpleTextCard */}
+        <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-2 [@media(min-width:1175px)]:grid-cols-3 gap-4">
+            <FeatureCard 
+              icon={rocketIcon} 
+              text={<>Idea<br/>to Production</>}
+              altText="Idea to Production"
+              variant="text-right-icon-left"
+            />
+            <FeatureCard 
+              icon={zapIcon} 
+              text={<>Scalable<br/>Solutions</>}
+              altText="Scalable solutions"
+              variant="text-left-icon-right"
+            />
+            <div className="hidden [@media(min-width:1175px)]:block">
+              <SimpleTextCard text="Compliance Standards" />
+            </div>
+          </div>
+          
+          <div className="[@media(min-width:1175px)]:hidden">
+            <SimpleTextCard text="Compliance Standards" />
+          </div>
+        </div>
+
+        {/* Row 4: Complex 2x3 grid */}
+        <div className="grid grid-cols-3 grid-rows-2 gap-4">
+          <div className="col-start-1 row-start-1">
+            <SimpleTextCard text="Creative Delivery" />
+          </div>
+          
+          <div className="col-start-1 row-start-2">
+            <TrustIndicator />
+          </div>
+          
+          <div className="col-start-2 col-span-2 row-start-1 row-span-2">
+            <QuoteCard />
+          </div>
+        </div>
+
+        {/* Row 5: ExperienceSection */}
+        <div className="w-full">
+          <ExperienceSection />
+        </div>
+
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
+
 }
