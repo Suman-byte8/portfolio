@@ -1,7 +1,7 @@
 import { DesignPlatformVideo } from "../../case-studies/content/design-platform-video";
 import { BottomBar } from "../../case-studies/shared/bottom-bar";
 import { RightBar } from "../../case-studies/shared/right-bar";
-import { designPlatformData } from "../../case-studies/content/design-platform-data";
+import { designPlatformData } from "../../case-studies/content/cab-booking-system-data";
 
 export function DesignMobile() {
   return (

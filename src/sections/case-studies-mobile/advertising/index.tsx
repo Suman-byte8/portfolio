@@ -1,7 +1,7 @@
 import { AdvertisingPlatformVideo } from "../../case-studies/content/advertising-platform-video";
 import { BottomBar } from "../../case-studies/shared/bottom-bar";
 import { RightBar } from "../../case-studies/shared/right-bar";
-import { advertisingPlatformData } from "../../case-studies/content/advertising-platform-data";
+import { silverArcadePremierData } from "../../case-studies/content/silver-arcade-premier-data";
 
 export function AdvertisingMobile() {
   return (
@@ -23,12 +23,12 @@ export function AdvertisingMobile() {
       
       {/* Bottom Bar with tech stack */}
       <div className="bg-black border border-[#353739] rounded-2xl p-4">
-        <BottomBar techStack={advertisingPlatformData.techStack} />
+        <BottomBar techStack={silverArcadePremierData.techStack} />
       </div>
       
       {/* Right Bar with buttons */}
       <div className="w-full">
-        <RightBar projectData={advertisingPlatformData.projectData} />
+        <RightBar projectData={silverArcadePremierData.projectData} />
       </div>
     </div>
   );

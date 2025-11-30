@@ -1,8 +1,8 @@
 import { VideoContainer } from './shared/video-container';
 import { RightBar } from './shared/right-bar';
 import { BottomBar } from './shared/bottom-bar';
-import { designPlatformData } from './content/design-platform-data';
-import { advertisingPlatformData } from './content/advertising-platform-data';
+import { cabBookingSystemData } from './content/cab-booking-system-data';
+import { silverArcadePremierData } from './content/silver-arcade-premier-data';
 import { useScrollTransition } from './useScrollTransition';
 
 export function TransitionLayout() {
@@ -16,7 +16,7 @@ export function TransitionLayout() {
   } = useScrollTransition();
 
   // Get the current data based on active case study
-  const currentData = activeCaseStudy === 'design' ? designPlatformData : advertisingPlatformData;
+  const currentData = activeCaseStudy === 'design' ? cabBookingSystemData : silverArcadePremierData;
 
   return (
     <div 
