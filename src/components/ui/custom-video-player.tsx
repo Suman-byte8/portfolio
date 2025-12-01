@@ -68,8 +68,10 @@ export function CustomVideoPlayer({
   const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
   
   // Generate Cloudinary video URL with optimizations
-  const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/f_auto,q_auto/${publicId}`;
+  const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/v1764578372/${publicId}`;
   const posterUrl = poster || `https://res.cloudinary.com/${cloudName}/video/upload/f_auto,q_auto,so_0/${publicId}.jpg`;
+
+  https://res.cloudinary.com/dvoreldfc/video/upload//sap_pakqiv.mp4
 
   useEffect(() => {
     const video = videoRef.current;

@@ -1,5 +1,5 @@
-import { DesignPlatformVideo } from "../content/design-platform-video";
-import { AdvertisingPlatformVideo } from "../content/advertising-platform-video";
+import { DesignPlatformVideo } from "../content/cab-booking-system-video";
+import { AdvertisingPlatformVideo } from "../content/silver-arcade-premier-video";
 
 interface VideoContainerProps {
   activeVideo: 'design' | 'advertising';

@@ -1,4 +1,4 @@
-import { DesignPlatformVideo } from "../../case-studies/content/design-platform-video";
+import { DesignPlatformVideo } from "../../case-studies/content/cab-booking-system-video";
 import { BottomBar } from "../../case-studies/shared/bottom-bar";
 import { RightBar } from "../../case-studies/shared/right-bar";
 import { cabBookingSystemData } from "../../case-studies/content/cab-booking-system-data";

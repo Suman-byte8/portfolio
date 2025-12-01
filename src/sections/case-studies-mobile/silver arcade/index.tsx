@@ -1,4 +1,4 @@
-import { AdvertisingPlatformVideo } from "../../case-studies/content/advertising-platform-video";
+import { AdvertisingPlatformVideo } from "../../case-studies/content/silver-arcade-premier-video";
 import { BottomBar } from "../../case-studies/shared/bottom-bar";
 import { RightBar } from "../../case-studies/shared/right-bar";
 import { silverArcadePremierData } from "../../case-studies/content/silver-arcade-premier-data";
