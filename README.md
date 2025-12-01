@@ -1,71 +1,74 @@
-# React + TypeScript + Vite
+# Dev Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A highly animated, dynamic, and visually rich personal portfolio website built with modern web technologies. This project showcases a developer's skills, projects, and methodology through an immersive user experience.
 
-Currently, two official plugins are available:
+## 🚀 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This portfolio is designed to be more than just a static resume. It features:
+- **Immersive 3D Elements**: Integrated using Three.js and React Three Fiber.
+- **Smooth Animations**: Powered by GSAP and Framer Motion for cinematic transitions and scroll effects.
+- **Responsive Design**: Fully responsive layout ensuring a great experience on all devices.
+- **Modern Styling**: Built with Tailwind CSS for a sleek, dark-themed aesthetic.
+- **Performance**: Optimized with Vite for fast load times and smooth interactions.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Core**: [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: 
+  - [GSAP](https://gsap.com/) (GreenSock Animation Platform)
+  - [Framer Motion](https://www.framer.com/motion/)
+- **3D Graphics**: 
+  - [Three.js](https://threejs.org/)
+  - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
+  - [React Three Drei](https://github.com/pmndrs/drei)
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/), [Lucide React](https://lucide.dev/)
 
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```
+src/
+├── assets/       # Static assets (images, icons, etc.)
+├── components/   # Reusable UI components
+├── constants/    # Global constants and configuration
+├── content/      # Text content and data
+├── hooks/        # Custom React hooks
+├── lib/          # Utility libraries and configurations
+├── pages/        # Application pages / routes
+├── sections/     # Page sections (Hero, About, Projects, etc.)
+├── stores/       # Global state stores (Zustand)
+└── utils/        # Helper functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 👏 Credits & Acknowledgements
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+This project is based on the exceptional work of **Stavros Symeonidis**.
 
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+- **Original Author**: [Stavros Symeonidis](https://www.stavrossymeonidis.dev/)
+- **Original Repository**: [techaras/dev-site](https://github.com/techaras/dev-site)
 
-## dev-site
+We gratefully acknowledge his contribution to the open-source community by providing this high-quality portfolio template.
+
+## 📦 Getting Started
+
+1.  **Clone the repository**
+    ```bash
+    git clone <your-repo-url>
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
