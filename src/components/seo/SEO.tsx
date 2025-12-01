@@ -24,10 +24,10 @@ interface SEOProps {
 }
 
 export const SEO: FC<SEOProps> = ({
-  title = "Stavros Symeonidis - Practical full-stack developer",
+  title = "suman saha - Practical full-stack developer",
   description = "Practical full-stack developer specializing in AI automation, enterprise solutions, and production-ready systems. Building streamlined operations with React, TypeScript, Python, and cutting-edge AI technologies.",
-  keywords = "Stavros Symeonidis, Full-Stack Developer, AI Developer, React Developer, TypeScript, Python, Machine Learning, Patent Winner, CTO, AI Automation, Enterprise Solutions",
-  author = "Stavros Symeonidis",
+  keywords = "suman saha, Full-Stack Developer, AI Developer, React Developer, TypeScript, Python, Machine Learning, Patent Winner, CTO, AI Automation, Enterprise Solutions",
+  author = "suman saha",
   image = "https://www.stavrossymeonidis.dev/og-image.jpg",
   url = "https://www.stavrossymeonidis.dev",
   type = "website",
@@ -36,9 +36,9 @@ export const SEO: FC<SEOProps> = ({
   children
 }) => {
   // Construct the full title with branding
-  const fullTitle = title === "Stavros Symeonidis - Practical full-stack developer" 
-    ? title 
-    : `${title} | Stavros Symeonidis`;
+  const fullTitle = title === "suman saha - Practical full-stack developer"
+    ? title
+    : `${title} | suman saha`;
 
   return (
     <>
@@ -47,15 +47,15 @@ export const SEO: FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      
+
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Stavros Symeonidis Portfolio" />
-      
+      <meta property="og:site_name" content="suman saha Portfolio" />
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
@@ -64,19 +64,19 @@ export const SEO: FC<SEOProps> = ({
       <meta name="twitter:image" content={image} />
 
       {twitterHandle && <meta name="twitter:creator" content={twitterHandle} />}
-      
+
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <link rel="canonical" href={url} />
-      
+
       {/* Structured Data / JSON-LD */}
       {jsonLd && (
-        <script 
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      
+
       {children}
     </>
   );

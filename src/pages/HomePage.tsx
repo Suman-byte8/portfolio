@@ -23,8 +23,8 @@ export function HomePage() {
 
   return (
     <>
-      <SEO 
-        title="Stavros Symeonidis - Practical full-stack developer"
+      <SEO
+        title="suman saha - Practical full-stack developer"
         description="Practical full-stack developer specializing in AI automation, enterprise solutions, and production-ready systems. Building streamlined operations with cutting-edge technology."
         url="https://www.stavrossymeonidis.dev"
         jsonLd={structuredData}

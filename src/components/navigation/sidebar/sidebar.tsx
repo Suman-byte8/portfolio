@@ -1,4 +1,4 @@
-import { 
+import {
   Menu,
   X
 } from "lucide-react";
@@ -22,10 +22,10 @@ export function Sidebar() {
     <>
       {/* Mobile Logo - Left side */}
       <div className="fixed top-7 left-6 z-50 md:hidden">
-        <img 
-          src={DevLogo} 
-          alt="Stavros Symeonidis Logo" 
-          className="w-12 h-12" 
+        <img
+          src={DevLogo}
+          alt="suman saha Logo"
+          className="w-12 h-12"
         />
       </div>
 
@@ -33,15 +33,15 @@ export function Sidebar() {
       <div className="fixed top-7 right-6 z-50 md:hidden">
         <MorphingPopover open={isOpen} onOpenChange={setIsOpen}>
           {/* Trigger - Hamburger Menu */}
-          <MorphingPopoverTrigger 
+          <MorphingPopoverTrigger
             className="flex items-center justify-center p-2 transition-all duration-300 hover:scale-105 active:scale-95 rounded-full border border-border hover:border-ring"
             aria-label="Open navigation menu"
           >
             <Menu className="w-6 h-6 text-foreground" />
           </MorphingPopoverTrigger>
-          
+
           {/* Content - Sidebar */}
-          <MorphingPopoverContent 
+          <MorphingPopoverContent
             className="fixed rounded-2xl shadow-xl flex flex-col"
             style={{
               top: '10px',
@@ -55,7 +55,7 @@ export function Sidebar() {
                 <span className="w-1 h-1 bg-[#b3b3b3] rounded-full"></span>
                 MENU
               </h2>
-              
+
               {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
@@ -68,7 +68,7 @@ export function Sidebar() {
                 </span>
               </button>
             </div>
-            
+
             {/* Mobile Navigation */}
             <MobileNav onNavigationClick={handleNavigationClick} />
           </MorphingPopoverContent>
