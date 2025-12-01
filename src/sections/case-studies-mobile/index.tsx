@@ -1,5 +1,5 @@
-import { AdvertisingMobile } from './advertising';
-import { DesignMobile } from './design';
+import { AdvertisingMobile } from './silver arcade';
+import { DesignMobile } from './cab booking system';
 
 export function CaseStudiesMobile() {
   return (

@@ -20,20 +20,20 @@ export function AboutMeMobile() {
         {/* Top row: 2 achievement cards */}
         <div className="grid grid-cols-2 gap-4 mb-4">
           <AchievementCard 
-            title={<>Sky Labs<br />Finalist<br />2022</>}
-            description="18 out of 250+"
+            title={<>Full-Stack Dev<br />Internship<br />2024</>}
+            description="Next24Tech Technology & Services"
           />
           <AchievementCard 
-            title={<>AI Patent<br />Winner<br />2023</>}
-            description="IP Hatch Winner"
+            title={<>Hackathon<br />Performer<br />2023</>}
+            description="Recognized for MERN-based project"
           />
         </div>
 
         {/* Bottom row: 1 achievement card */}
         <div className="grid grid-cols-1 mb-4">
           <AchievementCard 
-            title={<>AI Forge Cohort 5 Alumnus</>}
-            description="12 out of 500+"
+            title={<>10+ Projects Built Across Web</>}
+            description="MERN • Next.js • GSAP • APIs"
           />
         </div>
 
@@ -46,13 +46,13 @@ export function AboutMeMobile() {
         <div className="grid grid-cols-1 [@media(min-width:663px)]:grid-cols-2 gap-4 mb-4">
           <FeatureCard 
             icon={rocketIcon} 
-            text={<>Prototype to <br className="[@media(min-width:477px)]:hidden" />Production</>}
-            altText="Prototype to Production"
+            text={<>Idea<br className="[@media(min-width:477px)]:hidden" /> to Production</>}
+            altText="Idea to Production"
             variant="text-right-icon-left"
           />
           <FeatureCard 
             icon={zapIcon} 
-            text={<>Scalable <br className="[@media(min-width:477px)]:hidden" />Solutions</>}
+            text={<>Scalable<br className="[@media(min-width:477px)]:hidden" /> Solutions</>}
             altText="Scalable solutions"
             variant="text-left-icon-right"
           />
@@ -60,13 +60,13 @@ export function AboutMeMobile() {
 
         {/* Simple Text Card */}
         <div className="w-full mb-4">
-          <SimpleTextCard text="Enterprise Compliance Standards" />
+          <SimpleTextCard text="Compliance Standards" />
         </div>
 
         {/* First row: SimpleTextCard and TrustIndicator */}
         <div className="grid grid-cols-1 [@media(min-width:510px)]:grid-cols-2 gap-4 mb-4">
-          <TrustIndicator />
-          <SimpleTextCard text="Streamline Processes" />
+          {/* <TrustIndicator /> */}
+          <SimpleTextCard text="Creative Delivery" />
         </div>
 
         {/* Second row: QuoteCard */}
@@ -74,7 +74,7 @@ export function AboutMeMobile() {
           <QuoteCard />
         </div>
 
-        {/* Second row: QuoteCard */}
+        {/* Experience Section */}
         <div className="bento-square w-full">
           <ExperienceMobile />
         </div>

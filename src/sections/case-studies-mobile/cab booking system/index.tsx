@@ -9,10 +9,10 @@ export function DesignMobile() {
       {/* Title and Description */}
       <div className="text-left">
         <h3 className="font-heading text-lg text-foreground">
-          AI Design Platform
+          Design Backend Architecture for a Cab Booking System
         </h3>
         <p className="font-body text-sm text-muted-foreground leading-relaxed">
-          AI-powered design solution for T-shirt brands
+          Developed a robust backend architecture to support a scalable cab
         </p>
       </div>
       
