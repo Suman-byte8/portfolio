@@ -69,7 +69,7 @@ export function AboutMe() {
             <QuoteCard />
 
             {/* Column 1, Row 2 - Trusted by AccuraCast */}
-            <TrustIndicator />
+            {/* <TrustIndicator /> */}
 
             {/* Column 1, Rows 3-6 - Experience */}
             <ExperienceSection />

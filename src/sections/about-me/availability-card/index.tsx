@@ -11,7 +11,7 @@ export function AvailabilityCard() {
   return (
     <button 
       onClick={handleAvailabilityClick}
-      className="bento-no-min col-span-3 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
+      className="bento-no-min col-span-4 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
     >
       <h3 className="font-heading text-xl text-foreground text-center">
         Accepting clients from worldwide. <br />Let's build something great together!

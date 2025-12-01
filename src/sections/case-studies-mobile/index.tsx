@@ -1,5 +1,5 @@
-import { AdvertisingMobile } from './silver arcade';
-import { DesignMobile } from './cab booking system';
+import {  SilverArcadePremier } from './silver arcade';
+import { CabBookingSystem } from './cab booking system';
 
 export function CaseStudiesMobile() {
   return (
@@ -20,12 +20,12 @@ export function CaseStudiesMobile() {
         
         {/* Design Case Study */}
         <div className="mb-10">
-          <DesignMobile />
+          <CabBookingSystem />
         </div>
         
         {/* Advertising Case Study */}
         <div>
-          <AdvertisingMobile />
+          <SilverArcadePremier />
         </div>
       </div>
     </section>

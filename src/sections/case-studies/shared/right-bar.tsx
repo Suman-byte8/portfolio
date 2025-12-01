@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router";
 import gsap from "gsap";
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 import { GithubIcon } from "@/components/icons/socials/github-icon";
 import type { ProjectData } from "../types";
 
@@ -10,7 +10,7 @@ interface RightBarProps {
 }
 
 export function RightBar({ projectData }: RightBarProps) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const contentRef = useRef<HTMLDivElement>(null);
   const prevProjectDataRef = useRef<ProjectData | null>(null);
 
@@ -69,18 +69,18 @@ export function RightBar({ projectData }: RightBarProps) {
     window.open(projectData.buttons.githubUrl, '_blank', 'noopener,noreferrer');
   };
 
-  const handleLearnMoreClick = () => {
-    // Check if we're on mobile (< 768px)
-    const isMobile = window.innerWidth < 768;
+  // const handleLearnMoreClick = () => {
+  //   // Check if we're on mobile (< 768px)
+  //   const isMobile = window.innerWidth < 768;
     
-    if (isMobile) {
-      // Use React Router navigation for mobile
-      navigate(projectData.buttons.detailPath);
-    } else {
-      // Use hard navigation for desktop to bypass scroll restoration issues
-      window.location.href = projectData.buttons.detailPath;
-    }
-  };
+  //   if (isMobile) {
+  //     // Use React Router navigation for mobile
+  //     navigate(projectData.buttons.detailPath);
+  //   } else {
+  //     // Use hard navigation for desktop to bypass scroll restoration issues
+  //     window.location.href = projectData.buttons.detailPath;
+  //   }
+  // };
 
   return (
     <div className="w-full h-full flex flex-col overflow-y-auto">
@@ -122,13 +122,13 @@ export function RightBar({ projectData }: RightBarProps) {
             <GithubIcon className="w-4 h-4" />
             GitHub
           </button>
-          <button
+          {/* <button
             onClick={handleLearnMoreClick}
             className="font-heading text-[#f2f2f2] hover:opacity-80 transition-opacity flex items-center gap-2 cursor-pointer"
           >
             Learn More
             <ArrowRight className="w-5 h-5 mb-1" />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

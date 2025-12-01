@@ -3,7 +3,7 @@ import { BottomBar } from "../../case-studies/shared/bottom-bar";
 import { RightBar } from "../../case-studies/shared/right-bar";
 import { cabBookingSystemData } from "../../case-studies/content/cab-booking-system-data";
 
-export function DesignMobile() {
+export function CabBookingSystem() {
   return (
     <div className="w-full space-y-6">
       {/* Title and Description */}

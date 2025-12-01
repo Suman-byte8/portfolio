@@ -3,7 +3,7 @@ import { BottomBar } from "../../case-studies/shared/bottom-bar";
 import { RightBar } from "../../case-studies/shared/right-bar";
 import { silverArcadePremierData } from "../../case-studies/content/silver-arcade-premier-data";
 
-export function AdvertisingMobile() {
+export function SilverArcadePremier() {
   return (
     <div className="w-full space-y-6">
       {/* Title and Description */}

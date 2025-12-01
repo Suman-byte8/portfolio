@@ -16,7 +16,7 @@ export const navigationItems: NavigationItem[] = [
     mobileLink: "#how-i-work-mobile"
   },
   {
-    name: "Case Studies",
+    name: "Work",
     link: "#case-studies",
     mobileLink: "#case-studies-mobile"
   },
