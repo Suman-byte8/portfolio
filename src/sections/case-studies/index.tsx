@@ -10,7 +10,7 @@ export function CaseStudies() {
         {/* Section Title - Now gets pinned with the rest */}
         <div className="text-center mb-16">
           <h2 className="font-body text-lg font-light text-foreground mb-4">
-            CASE STUDIES
+            WORKS
           </h2>
           <p className="font-heading text-5xl text-foreground">
             Curated Work

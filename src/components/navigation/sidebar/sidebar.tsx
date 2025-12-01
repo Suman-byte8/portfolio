@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/morphing-popover";
 import { useState } from "react";
 import { MobileNav } from "./mobile-nav";
-import DevLogo from "@/assets/dev-logo.svg";
+import DevLogo from "@/assets/dev-logo.png";
 
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
