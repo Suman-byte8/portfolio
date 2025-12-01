@@ -1,30 +1,21 @@
 import { RestApiIcon } from "@/components/icons/skills/restful-api-icon";
+import { GraphQLIcon } from "@/components/icons/skills/graphql-icon";
+import { ExpressIcon } from "@/components/icons/skills/express-icon";
 import {
-    PythonIcon,
     TypescriptIcon,
     ReactIcon,
     NextjsIcon,
-    FastAPIIcon,
     ViteIcon,
-    LangchainIcon,
     OpenaiIcon,
-    HuggingFaceIcon,
-    OpencvIcon,
-    PineconeIcon,
-    PrismaIcon,
-    PostgresqlIcon,
     MongodbIcon,
     DockerIcon,
     VercelIcon,
     StripeIcon,
-    ClerkIcon,
-  } from "./icons";
-  import type { Skill } from "./types";
-import { GraphQLIcon } from "@/components/icons/skills/graphql-icon";
-import { ExpressIcon } from "@/components/icons/skills/express-icon";
-  
-  // Flattened skills data for grid layout
-  export const skillsData: Skill[] = [
+} from "./icons";
+import type { Skill } from "./types";
+
+// Flattened skills data for grid layout
+export const skillsData: Skill[] = [
     // Row 1
     // { name: "Python", icon: <PythonIcon className="w-12 h-12" /> },
     // { name: "LangChain", icon: <LangchainIcon className="w-12 h-12" /> },
@@ -48,4 +39,4 @@ import { ExpressIcon } from "@/components/icons/skills/express-icon";
     { name: "Vercel", icon: <VercelIcon className="w-12 h-12" /> },
     { name: "Stripe", icon: <StripeIcon className="w-12 h-12" /> },
     // { name: "Clerk", icon: <ClerkIcon className="w-12 h-12" /> },
-  ];
+];

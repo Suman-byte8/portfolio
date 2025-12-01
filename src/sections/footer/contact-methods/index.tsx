@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Copy, Check, ExternalLink } from "lucide-react";
 import { GithubIcon } from '@/components/icons/socials/github-icon';
-import { LinkedinIcon } from '@/components/icons/socials/linkedin-icon';
+
 import emailIcon from '../../../assets/email-icon.svg';
 
 export function ContactMethods() {
@@ -22,21 +22,6 @@ export function ContactMethods() {
   const handleGithubClick = () => {
     window.open('https://github.com/Suman-byte8', '_blank', 'noopener,noreferrer');
   };
-
-  const handleTwitterClick = () => {
-    window.open('https://x.com/Dev_Suman07', '_blank', 'noopener,noreferrer');
-  };
-
-
-  const handleThreadsClick = () => {
-    window.open('https://www.threads.com/@sum4.an?xmt=AQF0ZEHpJz3K2TpppqM-9UNoYuWoI0OaoKZZ_SgRgV-6P1I', '_blank', 'noopener,noreferrer');
-  };
-
-  const handleInstagramClick = () => {
-    window.open('https://www.instagram.com/sum4.an/', '_blank', 'noopener,noreferrer');
-  };
-
-
 
   return (
     <div className="flex flex-col gap-4 mt-8">
@@ -96,7 +81,7 @@ export function ContactMethods() {
       </div>
 
 
-{/* x row */}
+      {/* x row */}
       {/* <div className="group flex items-center gap-4 p-4 rounded-2xl border border-border transition-all hover:border-[#555759] hover:transform hover:-translate-y-0.5">
         <div className="w-12 h-12 rounded-lg border border-border group-hover:border-[#555759] transition-colors flex items-center justify-center flex-shrink-0">
           <GithubIcon className="w-6 h-6 text-background" />
@@ -113,7 +98,7 @@ export function ContactMethods() {
         </button>
       </div> */}
 
-{/* instagram row*/}
+      {/* instagram row*/}
       {/* <div className="group flex items-center gap-4 p-4 rounded-2xl border border-border transition-all hover:border-[#555759] hover:transform hover:-translate-y-0.5">
         <div className="w-12 h-12 rounded-lg border border-border group-hover:border-[#555759] transition-colors flex items-center justify-center flex-shrink-0">
           <GithubIcon className="w-6 h-6 text-background" />

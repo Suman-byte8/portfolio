@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { useNavigate } from "react-router";
+
 import gsap from "gsap";
 // import { ArrowRight } from "lucide-react";
 import { GithubIcon } from "@/components/icons/socials/github-icon";
@@ -18,15 +18,15 @@ export function RightBar({ projectData }: RightBarProps) {
     if (!contentRef.current) return;
 
     const content = contentRef.current;
-    
+
     // Check if the projectData has actually changed
-    const hasChanged = prevProjectDataRef.current && 
+    const hasChanged = prevProjectDataRef.current &&
       prevProjectDataRef.current.title !== projectData.title;
 
     if (hasChanged) {
       // Animate content transition
       const tl = gsap.timeline();
-      
+
       tl
         // Fade out and slide up current content
         .to(content, {
@@ -41,10 +41,10 @@ export function RightBar({ projectData }: RightBarProps) {
           // The content change happens automatically via React
         })
         // Fade in and slide down new content
-        .fromTo(content, 
-          { 
-            opacity: 0, 
-            y: 20 
+        .fromTo(content,
+          {
+            opacity: 0,
+            y: 20
           },
           {
             opacity: 1,
@@ -55,7 +55,7 @@ export function RightBar({ projectData }: RightBarProps) {
         );
     } else if (!prevProjectDataRef.current) {
       // Initial render - just fade in
-      gsap.fromTo(content, 
+      gsap.fromTo(content,
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
       );
@@ -72,7 +72,7 @@ export function RightBar({ projectData }: RightBarProps) {
   // const handleLearnMoreClick = () => {
   //   // Check if we're on mobile (< 768px)
   //   const isMobile = window.innerWidth < 768;
-    
+
   //   if (isMobile) {
   //     // Use React Router navigation for mobile
   //     navigate(projectData.buttons.detailPath);

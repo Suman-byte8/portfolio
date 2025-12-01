@@ -2,7 +2,7 @@ import { AchievementCard } from '../about-me/achievement-card';
 import { ProfileSection } from '../about-me/profile-section';
 import { FeatureCard } from '../about-me/feature-card';
 import { SimpleTextCard } from '../about-me/simple-text-card';
-import { TrustIndicator } from '../about-me/trust-indicator';
+
 import { QuoteCard } from '../about-me/quote-card';
 
 // Import SVG assets

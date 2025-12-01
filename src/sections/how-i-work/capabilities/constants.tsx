@@ -1,21 +1,14 @@
-import { PythonIcon } from "@/components/icons/skills/python-icon";
-import { TypescriptIcon } from "@/components/icons/skills/typescript-icon";
+
 import { ReactIcon } from "@/components/icons/skills/react-icon";
 import { NextjsIcon } from "@/components/icons/skills/next-js-icon";
-import { FastAPIIcon } from "@/components/icons/skills/fast-api-icon";
+
 import { ViteIcon } from "@/components/icons/skills/vite-icon";
-import { LangchainIcon } from "@/components/icons/skills/langchain-icon";
-import { OpenaiIcon } from "@/components/icons/skills/open-ai-icon";
-import { HuggingFaceIcon } from "@/components/icons/skills/hugging-face-icon";
-import { OpencvIcon } from "@/components/icons/skills/open-cv-icon";
-import { PineconeIcon } from "@/components/icons/skills/pinecone-icon";
-import { PrismaIcon } from "@/components/icons/skills/prisma-icon";
-import { PostgresqlIcon } from "@/components/icons/skills/postgresql-icon";
+
 import { MongodbIcon } from "@/components/icons/skills/mongo-db-icon";
 import { DockerIcon } from "@/components/icons/skills/docker-icon";
 import { VercelIcon } from "@/components/icons/skills/vercel-icon";
 import { StripeIcon } from "@/components/icons/skills/stripe-icon";
-import { ClerkIcon } from "@/components/icons/skills/clerk-icon";
+
 import type { Skill } from "./types";
 import { JavascriptIcon } from "@/components/icons/skills/javascript-icon";
 import { ExpressIcon } from "@/components/icons/skills/express-icon";
@@ -29,7 +22,7 @@ export const skillRows: Skill[][] = [
   [
     // { icon: <PythonIcon className="w-6 h-6" />, name: "Python" },
     // { icon: <TypescriptIcon className="w-6 h-6" />, name: "TypeScript" },
-    {icon: <JavascriptIcon className="w-6 h-6" />, name: "JavaScript" },
+    { icon: <JavascriptIcon className="w-6 h-6" />, name: "JavaScript" },
     { icon: <ReactIcon className="w-6 h-6" />, name: "React" },
     { icon: <NextjsIcon className="w-6 h-6" />, name: "Next.js" },
     { icon: <GraphQLIcon className="w-6 h-6" />, name: "GraphQL API" },
@@ -41,12 +34,12 @@ export const skillRows: Skill[][] = [
   [
     { icon: <PhotoshopIcon className="w-6 h-6" />, name: "Photoshop" },
     { icon: <BlenderIcon className="w-6 h-6" />, name: "Blender" },
-  //   { icon: <LangchainIcon className="w-6 h-6" />, name: "LangChain" },
-  //   { icon: <OpenaiIcon className="w-6 h-6" />, name: "OpenAI API" },
-  //   { icon: <HuggingFaceIcon className="w-6 h-6" />, name: "Hugging Face" },
-  //   { icon: <OpencvIcon className="w-6 h-6" />, name: "OpenCV" },
-  //   { icon: <PineconeIcon className="w-6 h-6" />, name: "Pinecone" },
-  //   { icon: <PrismaIcon className="w-6 h-6" />, name: "Prisma" },
+    //   { icon: <LangchainIcon className="w-6 h-6" />, name: "LangChain" },
+    //   { icon: <OpenaiIcon className="w-6 h-6" />, name: "OpenAI API" },
+    //   { icon: <HuggingFaceIcon className="w-6 h-6" />, name: "Hugging Face" },
+    //   { icon: <OpencvIcon className="w-6 h-6" />, name: "OpenCV" },
+    //   { icon: <PineconeIcon className="w-6 h-6" />, name: "Pinecone" },
+    //   { icon: <PrismaIcon className="w-6 h-6" />, name: "Prisma" },
   ],
   [
     // { icon: <PostgresqlIcon className="w-6 h-6" />, name: "PostgreSQL" },
