@@ -114,7 +114,7 @@ export function RightBar({ projectData }: RightBarProps) {
         </div>
 
         {/* Buttons - Always visible, but positioning adjusts based on screen size */}
-        <div className="flex items-center gap-6 mt-0 [@media(min-width:1390px)]:mt-6 justify-start">
+        <div className="flex items-center gap-4 mt-0 [@media(min-width:1390px)]:mt-6 justify-start">
           <button
             onClick={handleGithubClick}
             className="flex items-center gap-2 px-4 py-2 border border-border rounded-lg font-body text-sm text-foreground hover:border-ring transition-colors cursor-pointer"
@@ -122,13 +122,14 @@ export function RightBar({ projectData }: RightBarProps) {
             <GithubIcon className="w-4 h-4" />
             GitHub
           </button>
-          {/* <button
-            onClick={handleLearnMoreClick}
-            className="font-heading text-[#f2f2f2] hover:opacity-80 transition-opacity flex items-center gap-2 cursor-pointer"
-          >
-            Learn More
-            <ArrowRight className="w-5 h-5 mb-1" />
-          </button> */}
+          {projectData.buttons.domainUrl && (
+            <button
+              onClick={() => window.open(projectData.buttons.domainUrl, '_blank', 'noopener,noreferrer')}
+              className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-lg font-body text-sm hover:opacity-90 transition-opacity cursor-pointer"
+            >
+              Live Demo
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -35,6 +35,7 @@ export const silverArcadePremierData: CaseStudyData = {
     ],
     buttons: {
       githubUrl: "https://github.com/Suman-byte8/silver-arcade-premier-client",
+      domainUrl: "https://silverarcadepremier.com",
       detailPath: "/case-studies/advertising-platform"
     }
   },
