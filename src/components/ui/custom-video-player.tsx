@@ -3,7 +3,8 @@ import { Volume2, VolumeX } from 'lucide-react';
 import { useVideoViewport } from '@/hooks/useVideoViewport';
 
 interface CustomVideoPlayerProps {
-  publicId: string;
+  publicId?: string;
+  imageUrl?: string;
   className?: string;
   autoPlay?: boolean;
   muted?: boolean;
@@ -23,7 +24,7 @@ interface CustomVideoPlayerProps {
 const isMobileDevice = (): boolean => {
   if (typeof window === 'undefined') return false;
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-         (window.innerWidth <= 768);
+    (window.innerWidth <= 768);
 };
 
 // Safari detection utility
@@ -36,6 +37,7 @@ const isSafariBrowser = (): boolean => {
 
 export function CustomVideoPlayer({
   publicId,
+  imageUrl,
   className = '',
   autoPlay = false,
   muted = false,
@@ -50,7 +52,7 @@ export function CustomVideoPlayer({
   const videoRef = useRef<HTMLVideoElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const volumeRef = useRef<HTMLInputElement>(null);
-  
+
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(muted);
   const [currentTime, setCurrentTime] = useState(0);
@@ -62,18 +64,21 @@ export function CustomVideoPlayer({
   const { isInViewport } = useVideoViewport(videoRef, {
     threshold: 0.5,
     rootMargin: '0px',
-    enabled: true
+    enabled: !!publicId
   });
 
   const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
-  
-  // Generate Cloudinary video URL with optimizations
-  const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/v1764578372/${publicId}`;
-  const posterUrl = poster || `https://res.cloudinary.com/${cloudName}/video/upload/f_auto,q_auto,so_0/${publicId}.jpg`;
 
-  https://res.cloudinary.com/dvoreldfc/video/upload//sap_pakqiv.mp4
+  // Generate Cloudinary video URL with optimizations
+  const videoUrl = publicId ? `https://res.cloudinary.com/${cloudName}/video/upload/v1764578372/${publicId}` : '';
+  const posterUrl = poster || (publicId ? `https://res.cloudinary.com/${cloudName}/video/upload/f_auto,q_auto,so_0/${publicId}.jpg` : '');
 
   useEffect(() => {
+    if (!publicId) {
+      setIsLoading(false);
+      return;
+    }
+
     const video = videoRef.current;
     if (!video) return;
 
@@ -165,20 +170,22 @@ export function CustomVideoPlayer({
       video.removeEventListener('volumechange', handleVolumeChange);
       video.removeEventListener('ended', handleEnded);
     };
-  }, [onPlay, onPause, onTimeUpdate, onVolumeChange, loop]);
+  }, [onPlay, onPause, onTimeUpdate, onVolumeChange, loop, publicId]);
 
   // Auto-play based on viewport visibility
   useEffect(() => {
+    if (!publicId) return;
+
     const video = videoRef.current;
     if (!video) return;
 
     const isMobile = isMobileDevice();
     const isSafari = isSafariBrowser();
-    
+
     // Don't wait for loading completion on mobile or Safari
     if (isMobile || isSafari || !isLoading) {
-      console.log('🎬 CustomVideoPlayer: Viewport change detected', { 
-        isInViewport, 
+      console.log('🎬 CustomVideoPlayer: Viewport change detected', {
+        isInViewport,
         currentlyPlaying: isPlaying,
         isMobile,
         isSafari,
@@ -203,7 +210,7 @@ export function CustomVideoPlayer({
     } else {
       console.log('🎬 CustomVideoPlayer: Waiting for loading to complete');
     }
-  }, [isInViewport, isPlaying, isLoading]);
+  }, [isInViewport, isPlaying, isLoading, publicId]);
 
   const toggleMute = () => {
     const video = videoRef.current;
@@ -220,7 +227,7 @@ export function CustomVideoPlayer({
     const rect = progressBar.getBoundingClientRect();
     const pos = (e.clientX - rect.left) / rect.width;
     const newTime = pos * duration;
-    
+
     video.currentTime = newTime;
     setCurrentTime(newTime);
   };
@@ -232,7 +239,7 @@ export function CustomVideoPlayer({
     const newVolume = parseFloat(e.target.value);
     video.volume = newVolume;
     setVolume(newVolume);
-    
+
     if (newVolume === 0) {
       video.muted = true;
     } else if (video.muted) {
@@ -247,6 +254,18 @@ export function CustomVideoPlayer({
   };
 
   const progressPercentage = duration > 0 ? (currentTime / duration) * 100 : 0;
+
+  if (imageUrl) {
+    return (
+      <div className={`relative group ${className}`}>
+        <img
+          src={imageUrl}
+          alt="Project Preview"
+          className="w-full h-full object-contain"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={`relative group ${className}`}>
@@ -301,7 +320,7 @@ export function CustomVideoPlayer({
                     isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />
                   )}
                 </button>
-                
+
                 <input
                   ref={volumeRef}
                   type="range"

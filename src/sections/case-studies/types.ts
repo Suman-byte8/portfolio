@@ -10,6 +10,7 @@ export interface ProjectSection {
 
 export interface ProjectButtons {
   githubUrl: string;
+  domainUrl?: string;
   detailPath: string;
 }
 
