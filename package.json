@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://github.com/Suman-byte8/portfolio",
-
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && npm run generate-sitemap",
@@ -12,8 +11,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "analyze": "vite build --mode analyze",
-      "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@cloudinary/react": "^1.14.3",

@@ -18,7 +18,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     Sitemap({
-      hostname: 'https://www.stavrossymeonidis.dev',
+      hostname: 'https://suman-byte8.github.io/portfolio/',
       dynamicRoutes,
       exclude: ['/admin', '/private'],
       // Remove the incorrect properties and use the correct ones
@@ -37,6 +37,7 @@ export default defineConfig({
       outDir: 'dist'
     })
   ],
+  base: '/portfolio/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
