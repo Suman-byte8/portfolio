@@ -1,38 +1,41 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/public/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-  <!-- Additional SEO Meta Tags -->
-  <meta name="theme-color" content="#000000" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+    <link rel="dns-prefetch" href="https://fonts.cdnfonts.com" />
 
-  <!-- Preconnect to external domains -->
-  <link rel="preconnect" href="https://fonts.cdnfonts.com" />
-  <link rel="dns-prefetch" href="https://fonts.cdnfonts.com" />
+    <!-- Font imports -->
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/azonix" rel="stylesheet" />
 
-  <!-- Font imports -->
-  <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/azonix" rel="stylesheet">
+    <title>Suman Saha</title>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-KBX3FB2QWB"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <title>Suman Saha</title>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KBX3FB2QWB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KBX3FB2QWB');
-</script>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+    gtag("config", "G-KBX3FB2QWB");
+  </script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

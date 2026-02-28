@@ -45,7 +45,7 @@ export function ParticleSphere() {
 
   return (
     <Spline 
-      scene="/scene-f0f0f0.splinecode"
+      scene={`${import.meta.env.BASE_URL}scene-f0f0f0.splinecode`}
       onLoad={onLoad}
       style={{ width: '100%', height: '100%' }}
     />

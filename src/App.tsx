@@ -8,7 +8,7 @@ import { CaseStudyDetailPage } from "@/pages/CaseStudyDetailPage";
 import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
-import { SpeedInsights } from '@vercel/speed-insights/react';
+
 
 function DesktopApp() {
   return (
@@ -40,7 +40,7 @@ function App() {
       <SvgFilters />
       {isMobile ? <MobileApp /> : <DesktopApp />}
       <GlobalDrawer />
-      <SpeedInsights />
+     
     </ThemeProvider>
   );
 }

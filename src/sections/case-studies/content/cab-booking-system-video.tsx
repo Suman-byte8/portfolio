@@ -4,7 +4,7 @@ export function DesignPlatformVideo() {
   return (
     <div className="w-full h-full overflow-hidden">
       <CustomVideoPlayer
-        imageUrl="/cab.png"
+        imageUrl={`${import.meta.env.BASE_URL}cab.png`}
         className="w-full h-full [&>img]:w-full [&>img]:h-full"
       />
     </div>

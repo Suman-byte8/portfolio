@@ -1,4 +1,3 @@
-import { ParticleSphere } from './model/particle-sphere'
 import { HomeTitle } from './content/home-title'
 import { HomeInfoGrid } from './content/home-info-grid'
 import { AvailabilityStatus } from './content/availability-status'
@@ -9,8 +8,9 @@ export function Home() {
       id="home" 
       className="relative h-screen w-full overflow-hidden"
     >
-      <div className="absolute inset-0 bg-background">
-        <ParticleSphere />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted">
+        {/* Particle sphere temporarily disabled due to corrupted Spline file */}
+        {/* <ParticleSphere /> */}
       </div>
 
       {/* Desktop Layout */}

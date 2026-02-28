@@ -8,8 +8,8 @@ export function ProfileSection() {
       {/* Profile Image with CometCard - top row on mobile, left side on desktop */}
       <CometCard className="w-64 flex-shrink-0 [@media(min-width:685px)]:ml-4">
         <img 
-          src="/profile-dev.png" 
-          alt="Suman Saha Profile Picture" 
+          src={`${import.meta.env.BASE_URL}profile-dev.png`}
+          alt="Suman Saha Profile Picture"
           className="w-full h-full object-cover rounded-2xl"
         />
       </CometCard>
