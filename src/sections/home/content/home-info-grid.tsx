@@ -33,7 +33,7 @@ export function HomeInfoGrid() {
       {/* Description - Right column */}
       <div className="flex items-center justify-end order-2">
         <p className="font-body font-light text-[18px] text-[#b3b3b3] leading-relaxed text-left">
-          Practical full-stack developer<br />who blends solid engineering<br />with real-world business insight..
+          Data Science & AI/ML Enthusiast<br />with a solid foundation in<br />full-stack engineering..
         </p>
       </div>
       

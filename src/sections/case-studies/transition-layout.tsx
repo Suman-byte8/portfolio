@@ -4,6 +4,7 @@ import { BottomBar } from './shared/bottom-bar';
 import { cabBookingSystemData } from './content/cab-booking-system-data';
 import { silverArcadePremierData } from './content/silver-arcade-premier-data';
 import { ecommerceData } from './content/e-commerce-data';
+import { fifaPredictorData } from './content/fifa-worldcup-predictor-data';
 import { useScrollTransition } from './useScrollTransition';
 
 export function TransitionLayout() {
@@ -12,6 +13,7 @@ export function TransitionLayout() {
     designVideoRef,
     advertisingVideoRef,
     ecomVideoRef,
+    fifaVideoRef,
     rightBarRef,
     bottomBarRef,
     activeCaseStudy,
@@ -21,7 +23,8 @@ export function TransitionLayout() {
   const currentData =
     activeCaseStudy === 'design' ? cabBookingSystemData :
       activeCaseStudy === 'advertising' ? silverArcadePremierData :
-        ecommerceData;
+        activeCaseStudy === 'ecom' ? ecommerceData :
+          fifaPredictorData;
 
   return (
     <div
@@ -57,6 +60,14 @@ export function TransitionLayout() {
                 className="absolute inset-0 w-full h-full"
               >
                 <VideoContainer activeVideo="ecom" />
+              </div>
+
+              {/* FIFA Predictor Video */}
+              <div
+                ref={fifaVideoRef}
+                className="absolute inset-0 w-full h-full"
+              >
+                <VideoContainer activeVideo="fifa" />
               </div>
             </div>
 

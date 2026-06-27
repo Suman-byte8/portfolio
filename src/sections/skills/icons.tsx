@@ -17,3 +17,7 @@ export { DockerIcon } from "@/components/icons/skills/docker-icon";
 export { VercelIcon } from "@/components/icons/skills/vercel-icon";
 export { StripeIcon } from "@/components/icons/skills/stripe-icon";
 export { ClerkIcon } from "@/components/icons/skills/clerk-icon";
+export { DataScienceIcon } from "@/components/icons/skills/data-science-icon";
+export { AnalyticsIcon } from "@/components/icons/skills/analytics-icon";
+export { SqlIcon } from "@/components/icons/skills/sql-icon";
+export { BlenderIcon } from "@/components/icons/skills/blender-icon";

@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-export type ActiveCaseStudy = 'design' | 'advertising' | 'ecom';
+export type ActiveCaseStudy = 'design' | 'advertising' | 'ecom' | 'fifa';
 
 export function useScrollTransition() {
   // Refs for GSAP targeting
@@ -13,6 +13,7 @@ export function useScrollTransition() {
   const designVideoRef = useRef<HTMLDivElement>(null);
   const advertisingVideoRef = useRef<HTMLDivElement>(null);
   const ecomVideoRef = useRef<HTMLDivElement>(null);
+  const fifaVideoRef = useRef<HTMLDivElement>(null);
   const rightBarRef = useRef<HTMLDivElement>(null);
   const bottomBarRef = useRef<HTMLDivElement>(null);
 
@@ -20,7 +21,7 @@ export function useScrollTransition() {
   const [activeCaseStudy, setActiveCaseStudy] = useState<ActiveCaseStudy>('design');
 
   useLayoutEffect(() => {
-    if (!sectionRef.current || !designVideoRef.current || !advertisingVideoRef.current || !ecomVideoRef.current) {
+    if (!sectionRef.current || !designVideoRef.current || !advertisingVideoRef.current || !ecomVideoRef.current || !fifaVideoRef.current) {
       return;
     }
 
@@ -28,29 +29,33 @@ export function useScrollTransition() {
     const designVideo = designVideoRef.current;
     const advertisingVideo = advertisingVideoRef.current;
     const ecomVideo = ecomVideoRef.current;
+    const fifaVideo = fifaVideoRef.current;
 
     // Set initial positions
-    gsap.set(designVideo, { y: 0, zIndex: 3 });
-    gsap.set(advertisingVideo, { y: '100%', zIndex: 2 });
-    gsap.set(ecomVideo, { y: '100%', zIndex: 1 });
+    gsap.set(designVideo, { y: 0, zIndex: 4 });
+    gsap.set(advertisingVideo, { y: '100%', zIndex: 3 });
+    gsap.set(ecomVideo, { y: '100%', zIndex: 2 });
+    gsap.set(fifaVideo, { y: '100%', zIndex: 1 });
 
     // Create the main timeline
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
         start: 'center center',
-        end: '+=200%', // Increased scroll distance for 3 projects
+        end: '+=300%', // Increased scroll distance for 4 projects
         pin: true,
         scrub: 1,
         anticipatePin: 1,
         onUpdate: (self) => {
           // Content switching based on animation progress
-          if (self.progress < 0.33) {
+          if (self.progress < 0.25) {
             setActiveCaseStudy('design');
-          } else if (self.progress < 0.66) {
+          } else if (self.progress < 0.50) {
             setActiveCaseStudy('advertising');
-          } else {
+          } else if (self.progress < 0.75) {
             setActiveCaseStudy('ecom');
+          } else {
+            setActiveCaseStudy('fifa');
           }
         },
         invalidateOnRefresh: true,
@@ -82,7 +87,19 @@ export function useScrollTransition() {
         y: '0%',
         duration: 1,
         ease: 'power2.inOut'
-      }, 1);
+      }, 1)
+      // Ecom video slides up and out
+      .to(ecomVideo, {
+        y: '-100%',
+        duration: 1,
+        ease: 'power2.inOut'
+      }, 2)
+      // Fifa video slides up to replace it
+      .to(fifaVideo, {
+        y: '0%',
+        duration: 1,
+        ease: 'power2.inOut'
+      }, 2);
 
     // Cleanup function
     return () => {
@@ -112,6 +129,7 @@ export function useScrollTransition() {
     designVideoRef,
     advertisingVideoRef,
     ecomVideoRef,
+    fifaVideoRef,
     rightBarRef,
     bottomBarRef,
     activeCaseStudy,

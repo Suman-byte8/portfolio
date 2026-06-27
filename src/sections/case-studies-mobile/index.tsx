@@ -1,5 +1,7 @@
-import {  SilverArcadePremier } from './silver arcade';
+import { SilverArcadePremier } from './silver arcade';
 import { CabBookingSystem } from './cab booking system';
+import { ECommercePlatform } from './e-commerce';
+import { FifaPredictorPlatform } from './fifa-predictor';
 
 export function CaseStudiesMobile() {
   return (
@@ -24,8 +26,18 @@ export function CaseStudiesMobile() {
         </div>
         
         {/* Advertising Case Study */}
-        <div>
+        <div className="mb-10">
           <SilverArcadePremier />
+        </div>
+
+        {/* E-commerce Case Study */}
+        <div className="mb-10">
+          <ECommercePlatform />
+        </div>
+
+        {/* FIFA Case Study */}
+        <div>
+          <FifaPredictorPlatform />
         </div>
       </div>
     </section>

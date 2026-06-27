@@ -1,9 +1,10 @@
 import { DesignPlatformVideo } from "../content/cab-booking-system-video";
 import { AdvertisingPlatformVideo } from "../content/silver-arcade-premier-video";
 import { EcommerceVideo } from "../content/e-commerce-video";
+import { FifaPredictorVideo } from "../content/fifa-worldcup-predictor-video";
 
 interface VideoContainerProps {
-  activeVideo: 'design' | 'advertising' | 'ecom';
+  activeVideo: 'design' | 'advertising' | 'ecom' | 'fifa';
 }
 
 export function VideoContainer({ activeVideo }: VideoContainerProps) {
@@ -13,6 +14,7 @@ export function VideoContainer({ activeVideo }: VideoContainerProps) {
       {activeVideo === 'design' && <DesignPlatformVideo />}
       {activeVideo === 'advertising' && <AdvertisingPlatformVideo />}
       {activeVideo === 'ecom' && <EcommerceVideo />}
+      {activeVideo === 'fifa' && <FifaPredictorVideo />}
     </div>
   );
 }

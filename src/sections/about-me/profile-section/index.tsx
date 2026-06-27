@@ -27,7 +27,7 @@ export function ProfileSection() {
           </TextShimmer>
         </h3>
         <p className="font-body text-sm font-light text-muted-foreground mb-4">
-        Full-Stack Developer • AI & Automation Enthusiast • 3D Explorer
+        Data Science & AI/ML • Full-Stack Developer • 3D Explorer
         </p>
         <div className="flex justify-center [@media(min-width:685px)]:justify-start">
           <SocialLinks />
