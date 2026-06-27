@@ -37,7 +37,7 @@ export default defineConfig({
       outDir: 'dist'
     })
   ],
-  base: '/portfolio/',
+  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
